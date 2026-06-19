@@ -3,7 +3,7 @@
         xmlns:vm="using:GetStartedApp.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="450" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="400"
         x:Class="GetStartedApp.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
@@ -14,23 +14,37 @@
         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <vm:MainWindowViewModel/>
     </Design.DataContext>
-    <StackPanel>
-        <Border Margin="5" CornerRadius="10" Background="LightBlue">
-            <TextBlock Margin="5"
-                       FontSize="24"
-                       Background="Cyan"
-                       HorizontalAlignment="Center"
-                       Text="Temperature Converter">
-            </TextBlock>
-        </Border>
-        <Grid ShowGridLines="True" Margin="5"
-              ColumnDefinitions="120,120" RowDefinitions="Auto,Auto">
-            <TextBlock Grid.Row="0" Grid.Column="0" Margin="10">Celsuls</TextBlock>
-            <TextBox Grid.Row="0" Grid.Column="1" Margin="0 5" Name="Celsius" Text="0"/>
-            <TextBlock Grid.Row="1" Grid.Column="0" Margin="10">Fahrenheit</TextBlock>
-            <TextBox Grid.Row="1" Grid.Column="1" Margin="0 5" Name="Fahrenheit" Text="0"/>
+    <Grid RowDefinitions="Auto,*,Auto">
+        <!-- 标题栏 -->
+        <Grid Grid.Row="0" RowDefinitions="Auto, * ,Auto">
+            <Grid Grid.Row="0" Background="orange" Height="40" ColumnDefinitions="Auto,Auto,*,Auto,Auto">
+                <Rectangle Grid.Column="0" Fill="red" Width="40"></Rectangle>
+                <Rectangle Grid.Column="1" Fill="Blue" Width="40"></Rectangle>
+                <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                  <Label FontWeight="Black">Avalonia</Label>
+                    <Label>LOUDNESS METER</Label>
+                </StackPanel>
+                <Rectangle Grid.Column="3" Fill="Green" Width="40"></Rectangle>
+                <Rectangle Grid.Column="4" Fill="Yellow" Width="40"></Rectangle>
+                
+            </Grid>
         </Grid>
-        <Button HorizontalAlignment="Center" Click="Button_Click">Calculate</Button>
-
-    </StackPanel>
+        
+        <!--主区域-->
+        <Grid Grid.Row="1"  Background="Aqua" ColumnDefinitions="Auto,Auto,*">
+            <Rectangle Grid.Column="0" Width="110" Fill="Purple"></Rectangle>
+            <Rectangle Grid.Column="1" Width="140" Fill="White"></Rectangle>
+            <Rectangle Grid.Column="2"  Fill="Black"></Rectangle>
+        </Grid>
+        
+        <!--底部栏-->
+        <Grid Grid.Row="2" Background="White" Height="40" Margin="8" ColumnDefinitions="Auto,Auto,*,Auto,Auto,Auto,Auto">
+            <Button Grid.Column="0" Margin="0,0,8,0">Stereo</Button>
+            <Button Grid.Column="1" >YouTube</Button>
+            <Button Grid.Column="3" Margin="0,0,8,0">10 SEC</Button>
+            <Button Grid.Column="4" Margin="0,0,8,0">CONTINUES</Button>
+            <Rectangle Grid.Column="5" Fill="Orange" Width="30" Margin="0,0,8,0"></Rectangle>
+            <Rectangle Grid.Column="6" Fill="Red" Width="30" ></Rectangle>
+        </Grid>
+    </Grid>
 </Window>
