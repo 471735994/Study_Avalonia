@@ -14,23 +14,21 @@
         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <vm:MainWindowViewModel/>
     </Design.DataContext>
-    <StackPanel>
-        <Border Margin="5" CornerRadius="10" Background="LightBlue">
-            <TextBlock Margin="5"
-                       FontSize="24"
-                       Background="Cyan"
-                       HorizontalAlignment="Center"
-                       Text="Temperature Converter">
-            </TextBlock>
-        </Border>
-        <Grid ShowGridLines="True" Margin="5"
-              ColumnDefinitions="120,120" RowDefinitions="Auto,Auto">
-            <TextBlock Grid.Row="0" Grid.Column="0" Margin="10">Celsuls</TextBlock>
-            <TextBox Grid.Row="0" Grid.Column="1" Margin="0 5" Name="Celsius" Text="0"/>
-            <TextBlock Grid.Row="1" Grid.Column="0" Margin="10">Fahrenheit</TextBlock>
-            <TextBox Grid.Row="1" Grid.Column="1" Margin="0 5" Name="Fahrenheit" Text="0"/>
-        </Grid>
-        <Button HorizontalAlignment="Center" Click="Button_Click">Calculate</Button>
+    <Grid RowDefinitions="Auto,*,Auto">
+        <!-- Title Bar -->
+        <Grid  Grid.Row="0" Background="Orange" Height="40" ColumnDefinitions="Auto,Auto,*,Auto,Auto">
+            <Rectangle Grid.Column="0" Fill="Red" Width="40"></Rectangle>
+            <Rectangle Grid.Column="1" Fill="Blue" Width="40"></Rectangle>
+            <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Label FontWeight="Black">Avalonia</Label>
+                <Label>Loudness Meter</Label>
+            </StackPanel>
+            <Rectangle Grid.Column="3" Fill="green" Width="40"></Rectangle>
+            <Rectangle Grid.Column="4" Fill="yellow" Width="40"></Rectangle>
 
-    </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1">  </Grid>
+        <Grid Grid.Row="2" Background="Black" Height="40"></Grid>
+
+    </Grid>
 </Window>
