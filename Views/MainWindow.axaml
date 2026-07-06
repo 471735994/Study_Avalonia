@@ -1,34 +1,74 @@
-<Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:GetStartedApp.ViewModels"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="450" d:DesignHeight="450"
-        x:Class="GetStartedApp.Views.MainWindow"
-        x:DataType="vm:MainWindowViewModel"
-        Icon="/Assets/avalonia-logo.ico"
-        Title="GetStartedApp">
+<Window
+    x:Class="GetStartedApp.Views.MainWindow"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:GetStartedApp.ViewModels"
+    Title="GetStartedApp"
+    d:DesignHeight="450"
+    d:DesignWidth="450"
+    x:DataType="vm:MainWindowViewModel"
+    Icon="/Assets/avalonia-logo.ico"
+    mc:Ignorable="d">
 
     <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
-        to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-        <vm:MainWindowViewModel/>
+        <!--
+            This only sets the DataContext for the previewer in an IDE,
+            to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs)
+        -->
+        <vm:MainWindowViewModel />
     </Design.DataContext>
     <Grid RowDefinitions="Auto,*,Auto">
-        <!-- Title Bar -->
-        <Grid  Grid.Row="0" Background="Orange" Height="40" ColumnDefinitions="Auto,Auto,*,Auto,Auto">
-            <Rectangle Grid.Column="0" Fill="Red" Width="40"></Rectangle>
-            <Rectangle Grid.Column="1" Fill="Blue" Width="40"></Rectangle>
-            <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <!--  Title Bar  -->
+        <Grid
+            Grid.Row="0"
+            Height="40"
+            Background="Orange"
+            ColumnDefinitions="Auto,Auto,*,Auto,Auto">
+            <Rectangle
+                Grid.Column="0"
+                Width="40"
+                Fill="Red" />
+            <Rectangle
+                Grid.Column="1"
+                Width="40"
+                Fill="Blue" />
+            <StackPanel
+                Grid.Column="2"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
                 <Label FontWeight="Black">Avalonia</Label>
                 <Label>Loudness Meter</Label>
             </StackPanel>
-            <Rectangle Grid.Column="3" Fill="green" Width="40"></Rectangle>
-            <Rectangle Grid.Column="4" Fill="yellow" Width="40"></Rectangle>
+            <Rectangle
+                Grid.Column="3"
+                Width="40"
+                Fill="green" />
+            <Rectangle
+                Grid.Column="4"
+                Width="40"
+                Fill="yellow" />
 
         </Grid>
-        <Grid Grid.Row="1">  </Grid>
-        <Grid Grid.Row="2" Background="Black" Height="40"></Grid>
+        <Grid
+            Grid.Row="1"
+            Background="Black"
+            ColumnDefinitions="Auto,Auto,*">
+            <Rectangle
+                Grid.Column="0"
+                Width="110"
+                Fill="purple" />
+            <Rectangle
+                Grid.Column="1"
+                Width="110"
+                Fill="orange" />
+        </Grid>
+        <Grid
+            Grid.Row="2"
+            Height="40"
+            Background="Black" />
 
     </Grid>
 </Window>
