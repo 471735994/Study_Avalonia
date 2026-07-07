@@ -7,7 +7,7 @@
     xmlns:vm="using:GetStartedApp.ViewModels"
     Title="GetStartedApp"
     d:DesignHeight="450"
-    d:DesignWidth="450"
+    d:DesignWidth="600"
     x:DataType="vm:MainWindowViewModel"
     Icon="/Assets/avalonia-logo.ico"
     mc:Ignorable="d">
@@ -64,11 +64,34 @@
                 Grid.Column="1"
                 Width="110"
                 Fill="orange" />
+            <Rectangle Grid.Column="2" Fill="black" />
         </Grid>
         <Grid
             Grid.Row="2"
             Height="40"
-            Background="Black" />
+            Background="AliceBlue"
+            ColumnDefinitions="Auto,Auto,*,Auto,Auto,Auto,Auto">
+            <Button Grid.Column="0" Margin="8,0,8,0">Stereo</Button>
+            <Button Grid.Column="1" Content="Youtube" />
+            <Button
+                Grid.Column="3"
+                Margin="0,0,8,0"
+                Content="10 SEC" />
+            <Button
+                Grid.Column="4"
+                Margin="0,0,8,0"
+                Content="Continue" />
+            <Rectangle
+                Grid.Column="5"
+                Width="30"
+                Margin="0,8,8,8"
+                Fill="Green" />
+            <Rectangle
+                Grid.Column="6"
+                Width="30"
+                Margin="0,8,8,8"
+                Fill="Orange" />
+        </Grid>
 
     </Grid>
 </Window>
