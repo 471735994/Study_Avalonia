@@ -6,8 +6,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="using:GetStartedApp.ViewModels"
     Title="GetStartedApp"
-    d:DesignHeight="450"
-    d:DesignWidth="600"
+    d:DesignHeight="630"
+    d:DesignWidth="1048"
     x:DataType="vm:MainWindowViewModel"
     Icon="/Assets/avalonia-logo.ico"
     mc:Ignorable="d">
@@ -50,16 +50,73 @@
                 Grid.Column="4"
                 Width="40"
                 Fill="yellow" />
-
         </Grid>
         <Grid
             Grid.Row="1"
             Background="Black"
             ColumnDefinitions="Auto,Auto,*">
-            <Rectangle
+            <Grid
                 Grid.Column="0"
-                Width="110"
-                Fill="purple" />
+                Width="150"
+                RowDefinitions="*,Auto,Auto">
+                <!--  音量刻度板  -->
+                <Grid
+                    Grid.Row="0"
+                    Margin="5,20"
+                    RowDefinitions="*,*,*,*,*,*,*,*,*,*">
+                    <!--  刻度板样式  -->
+                    <Grid.Styles>
+                        <Style Selector="Label">
+                            <Setter Property="Foreground" Value="White" />
+                            <Setter Property="FontSize" Value="12" />
+                        </Style>
+                    </Grid.Styles>
+                    <!--  刻度值  -->
+                    <Label Grid.Row="0">0—</Label>
+                    <Label Grid.Row="1">0—</Label>
+                    <Label Grid.Row="2">0—</Label>
+                    <Label Grid.Row="3">0—</Label>
+                    <Label Grid.Row="4">0—</Label>
+                    <Label Grid.Row="5">0—</Label>
+                    <Label Grid.Row="6">0—</Label>
+                    <Label Grid.Row="7">0—</Label>
+                    <Label Grid.Row="8">0—</Label>
+                    <Label Grid.Row="9" />
+                </Grid>
+
+                <!--  音量条标签  -->
+                <Label
+                    Grid.Row="1"
+                    Margin="0,8,0,0"
+                    HorizontalAlignment="Center"
+                    Content="Lable"
+                    FontSize="20"
+                    Foreground="White" />
+
+                <!--  按钮栈板  -->
+                <StackPanel
+                    Grid.Row="2"
+                    Margin="0,0,0,8"
+                    HorizontalAlignment="Center"
+                    Orientation="Horizontal">
+
+                    <!--  按钮样式  -->
+                    <StackPanel.Styles>
+                        <Style Selector="Button">
+                            <Setter Property="FontSize" Value="16" />
+                            <Setter Property="Background" Value="#7f98c7" />
+                            <Setter Property="Foreground" Value="White" />
+                            <Setter Property="CornerRadius" Value="20" />
+                            <Setter Property="Padding" Value="8,2" />
+                            <Setter Property="Margin" Value="8,0,8,0" />
+                        </Style>
+                    </StackPanel.Styles>
+
+                    <!--  按钮  -->
+                    <Button Content="A" />
+                    <Button Content="INT-LRA" />
+                </StackPanel>
+            </Grid>
             <Rectangle
                 Grid.Column="1"
                 Width="110"
