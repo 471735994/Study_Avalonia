@@ -62,26 +62,62 @@
                 <!--  音量刻度板  -->
                 <Grid
                     Grid.Row="0"
-                    Margin="5,20"
-                    RowDefinitions="*,*,*,*,*,*,*,*,*,*">
+                    Margin="10,0"
+                    ColumnDefinitions="Auto,*,Auto"
+                    RowDefinitions="3*,3*,3*,9*,5*,4*,9*,9*,9*,6*,Auto">
                     <!--  刻度板样式  -->
                     <Grid.Styles>
                         <Style Selector="Label">
                             <Setter Property="Foreground" Value="White" />
                             <Setter Property="FontSize" Value="12" />
+                            <Setter Property="HorizontalAlignment" Value="Right" />
                         </Style>
                     </Grid.Styles>
                     <!--  刻度值  -->
-                    <Label Grid.Row="0">0—</Label>
-                    <Label Grid.Row="1">0—</Label>
-                    <Label Grid.Row="2">0—</Label>
-                    <Label Grid.Row="3">0—</Label>
-                    <Label Grid.Row="4">0—</Label>
-                    <Label Grid.Row="5">0—</Label>
-                    <Label Grid.Row="6">0—</Label>
-                    <Label Grid.Row="7">0—</Label>
-                    <Label Grid.Row="8">0—</Label>
-                    <Label Grid.Row="9" />
+                    <Label Grid.Row="0" Grid.Column="0">0  —</Label>
+                    <Label Grid.Row="1" Grid.Column="0">-3 —</Label>
+                    <Label Grid.Row="2" Grid.Column="0">-6 —</Label>
+                    <Label Grid.Row="3" Grid.Column="0">-9 —</Label>
+                    <Label Grid.Row="4" Grid.Column="0">-18 —</Label>
+                    <Label Grid.Row="5" Grid.Column="0">-23 —</Label>
+                    <Label Grid.Row="6" Grid.Column="0">-27 —</Label>
+                    <Label Grid.Row="7" Grid.Column="0">-36 —</Label>
+                    <Label Grid.Row="8" Grid.Column="0">-45 —</Label>
+                    <Label Grid.Row="9" Grid.Column="0">-54 —</Label>
+                    <Label Grid.Row="10" Grid.Column="0" />
+
+                    <!--  音量条  -->
+                    <Grid
+                        Grid.Row="0"
+                        Grid.RowSpan="11"
+                        Grid.Column="1"
+                        Width="20"
+                        RowDefinitions="23*,37*">
+                        <Rectangle
+                            Grid.Row="0"
+                            Width="20"
+                            Margin="0,10,0,-10"
+                            Fill="#b05c4e" />
+                        <Rectangle
+                            Grid.Row="1"
+                            Width="20"
+                            Margin="0,10,0,0"
+                            Fill="White" />
+                    </Grid>
+
+
+
+                    <Label Grid.Row="0" Grid.Column="2">—</Label>
+                    <Label Grid.Row="1" Grid.Column="2">—</Label>
+                    <Label Grid.Row="2" Grid.Column="2">—</Label>
+                    <Label Grid.Row="3" Grid.Column="2">—</Label>
+                    <Label Grid.Row="4" Grid.Column="2">—</Label>
+                    <Label Grid.Row="5" Grid.Column="2">—</Label>
+                    <Label Grid.Row="6" Grid.Column="2">—</Label>
+                    <Label Grid.Row="7" Grid.Column="2">—</Label>
+                    <Label Grid.Row="8" Grid.Column="2">—</Label>
+                    <Label Grid.Row="9" Grid.Column="2">—</Label>
+                    <Label Grid.Row="10" Grid.Column="2" />
                 </Grid>
 
                 <!--  音量条标签  -->
