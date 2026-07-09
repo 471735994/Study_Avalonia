@@ -20,16 +20,19 @@
         <vm:MainWindowViewModel />
     </Design.DataContext>
     <Grid RowDefinitions="Auto,*,Auto">
-        <!--  Title Bar  -->
+        <!--  标题栏  -->
         <Grid
             Grid.Row="0"
-            Height="40"
-            Background="Orange"
+            Height="50"
+            Background="White"
             ColumnDefinitions="Auto,Auto,*,Auto,Auto">
-            <Rectangle
-                Grid.Column="0"
-                Width="40"
-                Fill="Red" />
+            <!--  设置按钮  -->
+            <Button Grid.Column="0">
+                <Svg
+                    Width="40"
+                    Height="40"
+                    Path="/Assets/Monitor.svg" />
+            </Button>
             <Rectangle
                 Grid.Column="1"
                 Width="40"
@@ -125,7 +128,7 @@
                     Grid.Row="1"
                     Margin="0,8,0,0"
                     HorizontalAlignment="Center"
-                    Content="Lable"
+                    Content="Label"
                     FontSize="20"
                     Foreground="White" />
 
