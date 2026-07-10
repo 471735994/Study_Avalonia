@@ -189,11 +189,9 @@
                     <Button Content="INT-LRA" />
                 </StackPanel>
             </Grid>
-            <Rectangle
-                Grid.Column="1"
-                Width="110"
-                Fill="orange" />
-            <Rectangle Grid.Column="2" Fill="black" />
+            <!--  详情面板  -->
+            <StackPanel Grid.Column="2" Width="170" />
+
         </Grid>
         <Grid
             Grid.Row="2"
