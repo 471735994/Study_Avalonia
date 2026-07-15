@@ -13,4 +13,12 @@
     <Application.Styles>
         <FluentTheme />
     </Application.Styles>
+
+    <Application.Resources>
+        <SolidColorBrush x:Key="LightBlueBrush" Color="#606875" />
+        <SolidColorBrush x:Key="MidBlueBrush" Color="#373c44" />
+        <SolidColorBrush x:Key="DarkBlueBrush" Color="#1a1c20" />
+        <SolidColorBrush x:Key="FadedRedBrush" Color="#bc7c7a" />
+
+    </Application.Resources>
 </Application>
