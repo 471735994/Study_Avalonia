@@ -3,6 +3,7 @@
     xmlns="https://github.com/avaloniaui"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:GetStartedApp.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="using:GetStartedApp.ViewModels"
     Title="GetStartedApp"
@@ -190,9 +191,24 @@
                 </StackPanel>
             </Grid>
             <!--  详情面板  -->
-            <StackPanel Grid.Column="2" Width="170" />
+            <StackPanel
+                Grid.Column="1"
+                Width="170"
+                Margin="0,8,10,8">
+                <local:LargeLabelControl />
+                <local:LargeLabelControl />
+                <local:LargeLabelControl />
+                <local:LargeLabelControl />
+                <local:LargeLabelControl />
+                <local:LargeLabelControl />
+
+            </StackPanel>
+
+            <!--  图像面板  -->
+            <Rectangle Grid.Column="2" Fill="Orange" />
 
         </Grid>
+        <!--  底部工具栏  -->
         <Grid
             Grid.Row="2"
             Height="40"
