@@ -10,15 +10,16 @@
         <local:ViewLocator />
     </Application.DataTemplates>
 
+    <Application.Resources>
+        <SolidColorBrush x:Key="LightBlueBrush">#606875</SolidColorBrush>
+        <SolidColorBrush x:Key="MidBlueBrush">#373c44</SolidColorBrush>
+        <SolidColorBrush x:Key="DarkBlueBrush">#1a1c20</SolidColorBrush>
+        <SolidColorBrush x:Key="FadedRedBrush">#bc7c7a</SolidColorBrush>
+    </Application.Resources>
+
     <Application.Styles>
         <FluentTheme />
+        <StyleInclude Source="avares://GetStartedApp/Views/LargeLabelControl.axaml" />
     </Application.Styles>
 
-    <Application.Resources>
-        <SolidColorBrush x:Key="LightBlueBrush" Color="#606875" />
-        <SolidColorBrush x:Key="MidBlueBrush" Color="#373c44" />
-        <SolidColorBrush x:Key="DarkBlueBrush" Color="#1a1c20" />
-        <SolidColorBrush x:Key="FadedRedBrush" Color="#bc7c7a" />
-
-    </Application.Resources>
 </Application>

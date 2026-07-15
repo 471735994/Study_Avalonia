@@ -190,18 +190,25 @@
                     <Button Content="INT-LRA" />
                 </StackPanel>
             </Grid>
-
-            <!--  详细面板  -->
+            <!--  详情面板  -->
             <StackPanel
                 Grid.Column="1"
-                Width="110"
-                Background="#212121">
+                Width="170"
+                Margin="0,8,10,8">
                 <local:LargeLabelControl />
+                <local:LargeLabelControl />
+                <local:LargeLabelControl />
+                <local:LargeLabelControl />
+                <local:LargeLabelControl />
+                <local:LargeLabelControl />
+
             </StackPanel>
 
+            <!--  图像面板  -->
+            <Rectangle Grid.Column="2" Fill="Orange" />
 
-            <Rectangle Grid.Column="2" Fill="black" />
         </Grid>
+        <!--  底部工具栏  -->
         <Grid
             Grid.Row="2"
             Height="40"
